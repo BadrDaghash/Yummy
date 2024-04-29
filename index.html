@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body class="bg-black ">
+    <div id="loading" class="d-flex vh-100 justify-content-center align-items-center ">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    <!-- Nav -->
+    <div class="header position-absolute">
+        <div class="menu">
+            <!-- fixed nav-->
+            <div class="menu-fixed  d-flex flex-column justify-content-between">
+                <div class="menu-img mt-3 ">
+                    <img src="pics/logo.png" class="w-100 " alt="mene-image">
+                </div>
+                <div class="menu-icon text-center">
+                    <i class="fa-solid fa-bars fa-2xl d-block first" style="color: #000000;"></i>
+                    <i class="fa-solid open-close-icon fa-2x fa-x d-none second" style="color: #000000;"></i>
+                </div>
+                <div class="menu-footer-icons d-flex flex-column text-center mb-3">
+                    <i class="fa-solid fa-globe" style="color: #000000;"></i>
+                    <i class="fa-solid fa-share-nodes" style="color: #000000;"></i>
+                </div>
+            </div>
+            <!--transition nav-->
+            <div class="menu-slider d-flex flex-column justify-content-between  ">
+                <div class="menu-links  pt-4 d-flex flex-column">
+                    <a href="" class="ps-3 py-2" id="search"> Search </a>
+                    <a href="" class="ps-3 py-2" id="Category"> Categories</a>
+                    <a href="" class="ps-3 py-2" id="area"> Area</a>
+                    <a href="" class="ps-3 py-2" id="recipes"> Ingriedients</a>
+                    <a href="" class="ps-3 py-2" id="Contact"> Contact Us</a>
+                </div>
+                <div class="menu-footer ps-3">
+                    <div class="footer-icons">
+                        <i class="fa-brands fa-facebook text-white"></i>
+                        <i class="fa-brands fa-twitter text-white"></i>
+                        <i class="fa-solid fa-globe text-white"></i>
+                    </div>
+                    <div class="footer-text">
+                        <p style="font-family: sans-serif;color:white;font-size: 15px;">Copyright Â© 2019 All Rights
+                            <br>Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search section -->
+    <div class="container " id="searchCon">
+        <div class="row d-flex pt-5 d-none " id="searchInputs">
+            <div class="inner col-md-6">
+                <input class="form-control bg-transparent text-white " id="searchName" type="text"
+                    placeholder="Search By Name">
+            </div>
+            <div class="inner col-md-6">
+                <input class="form-control bg-transparent text-white searchLetter" id="searchLetter" type="text"
+                    placeholder="Search By First Letter">
+            </div>
+        </div>
+        <div class="row pt-5" id="searchResult">
+        </div>
+        <div class="row " id="searchRes ">
+        </div>
+    </div>
+    <div class="container  ">
+        <div class="row" id="resultRow"> </div>
+    </div>
+
+    <!-- Contact Us-->
+    <div class="container ">
+        <div class="row" id="rowContact" class="d-none">
+            <div class="contact min-vh-100 d-flex justify-content-center align-items-center ">
+                <div class="container w-75">
+                    <div class="row ">
+                        <div class="inner col-md-6  g-4">
+                            <input id="nameInput" type="text" class="form-control d-block"
+                                placeholder="Enter Your Name">
+                            <div id="nameAlert" class="alert alert-danger d-none w-100 mt-2">
+                                " Special characters and numbers not allowed "
+                            </div>
+                        </div>
+                        <div class="inner col-md-6  g-4">
+                            <input id="emailInput" type="email" class="form-control d-block"
+                                placeholder="Enter Your Email">
+                            <div id="emailAlert" class="alert alert-danger d-none w-100 mt-2">
+                                Email not valid *exemple@yyy.zzz
+                            </div>
+                        </div>
+                        <div class="inner col-md-6  g-4">
+                            <input id="phoneInput" type="number" class="form-control d-block"
+                                placeholder="Enter Your Phone">
+                            <div id="phoneAlert" class="alert alert-danger d-none w-100 mt-2">
+                                Enter valid Phone number
+                            </div>
+                        </div>
+                        <div class="inner col-md-6  g-4">
+                            <input id="ageInput" type="number" class="form-control d-block"
+                                placeholder="Enter Your Age">
+                            <div id="ageAlert" class="alert alert-danger d-none w-100 mt-2">
+                                Enter valid Age
+                            </div>
+                        </div>
+                        <div class="inner col-md-6  g-4">
+                            <input id="passwordInput" type="password" class="form-control d-block"
+                                placeholder="Enter Your Password">
+                            <div id="passwordAlert" class="alert alert-danger d-none w-100 mt-2">
+                                "Enter valid password *Minimum eight characters, at least one letter and one number:
+                                * "
+                            </div>
+                        </div>
+                        <div class="inner col-md-6  g-4">
+                            <input id="repasswordInput" type="password" class="form-control d-block"
+                                placeholder="Repassword">
+                            <div id="repasswordAlert" class="alert alert-danger d-none w-100 mt-2">
+                                Enter valid repassword
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-danger mx-auto mt-3 px-2 submitBtn"
+                            style="width: 80px;">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
