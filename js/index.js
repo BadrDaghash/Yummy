@@ -263,6 +263,7 @@ function displayArea(result) {
       });
    });
 }
+
 //!  display recipes one
 function displayIngredients(Ingredient) {
    let cartona = ``;
@@ -285,6 +286,7 @@ function displayIngredients(Ingredient) {
      });
    }
  }
+ 
 // ! category clicked 
 async function getCategoryMeals(category) {
    let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
